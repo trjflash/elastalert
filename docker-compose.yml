@@ -7,8 +7,8 @@ services:
     
     volumes:
         - type: bind
-          source: config/config.yml
-          target: /opt/elastalert/config.yaml
+          source: config/elastalert.yml
+          target: /opt/elastalert/elastalert.yaml
           
         - type: bind
           source: rules
@@ -16,7 +16,6 @@ services:
           
     networks:
       - elastalert
-	  
 networks:
   elastalert:
     name: elastalert
