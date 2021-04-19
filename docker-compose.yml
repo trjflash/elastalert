@@ -1,0 +1,23 @@
+version: '3.8'
+services:
+  filebeat01:
+    image: trjflash/elastalert:latest
+    container_name: elastalert
+    user: root
+    
+    volumes:
+        - type: bind
+          source: config/config.yml
+          target: /opt/elastalert/config.yaml
+          
+        - type: bind
+          source: rules
+          target: /opt/elastalert/rules  
+          
+    networks:
+      - elastalert
+	  
+networks:
+  elastalert:
+    name: elastalert
+    driver: bridge
