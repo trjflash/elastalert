@@ -1,5 +1,5 @@
 name: "WARNING : Disk Usage Alert"
-description: "zmart.kz running out of free disk space"
+description: "description"
 severity: "warning"
 
 index: magnum-prod-metrics*
@@ -33,11 +33,11 @@ alert_text: "
 *Used %*        : {0:.0%}\n
 *Host*          : {1}\n
 *Mount Point*   : {2}\n
-*ElastAlert Node*  : zmart.kz es.ecomm.kz"
+*ElastAlert Node*  : <NODE NAME>"
 alert_text_type: alert_text_only
 alert_text_args: ["system.filesystem.used.pct","host","system.filesystem.mount_point"]
 
-telegram_bot_token: 1788452722:AAGH3RUTNMvb0s3oC-4RyQgDHILIW0sayQk
+telegram_bot_token: <TOCKEN>
 # Unique identifier for the target chat or username of the target channel (in the format @channelusername)
 # https://api.telegram.org/bot_token/getUpdates
-telegram_room_id: "@FlashTestAlerts"
+telegram_room_id: "@<ROOM NAME>"
